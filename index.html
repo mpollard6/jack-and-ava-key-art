@@ -219,8 +219,6 @@
   .tubi .cell { width:150px; }
   .tubi .shot img, .tubi .shot .blank { aspect-ratio:408/583; border-radius:0; }
   .tubi .shot .blank { background:linear-gradient(140deg,#1b1b1b,#0e0e0e 60%,#151515); }
-  .tubi .shot.contain { background:#000; outline:1px dashed rgba(194,90,66,.55); }
-  .tubi .shot.contain img { object-fit:contain; }
 
   @media (prefers-reduced-motion:reduce) { * { transition:none !important; animation:none !important; } }
 </style>
@@ -229,15 +227,15 @@
 
   <header>
     <p class="eyebrow">Proposed artwork</p>
-    <h1>Jack and Ava<br>16&#215;9 Key Art</h1>
+    <h1>Jack and Ava<br>Cover Artwork</h1>
     <p class="lede">
       The cover currently running on Prime sits the still inside a card, so it reads as a
       small boxed image beside every full-bleed thumbnail around it. Below are two
-      replacements that fill the frame. Drag either slider to see the change, then scroll on for how the artwork sits in each store.
+      replacements that fill the frame. Drag either slider to see the change, then scroll on for how the artwork sits in each store, including a portrait version built for Tubi.
     </p>
     <div class="meta">
       <span><b>Film</b> Jack and Ava (2024)</span>
-      <span><b>Delivery</b> 1920&#215;1080 and 2560&#215;1440 JPEG, sRGB</span>
+      <span><b>Delivery</b> 16:9 and portrait, JPEG, sRGB</span>
     </div>
   </header>
 
@@ -390,27 +388,32 @@
       <div class="store">
         <div class="store-head">
           <span class="name">Tubi</span>
-          <span class="basis">portrait 2:3 &#183; square corners &#183; measured on tubitv.com</span>
+          <span class="basis">portrait 408&#215;583 &#183; square corners &#183; measured on tubitv.com</span>
         </div>
         <div class="frame"><div class="frame-in tubi">
           <div class="row">
             <div class="cell"><div class="shot"><div class="blank"></div></div><div class="cellcap"></div></div>
             <div class="cell">
-              <div class="shot"><img src="tubi-poster.jpg" alt="The release poster shown as a Tubi portrait tile."></div>
-              <div class="cellcap on">Poster, fits</div>
+              <div class="shot"><img src="tubi-now.jpg" alt="The artwork Tubi is running now: a cream card with the logotype above a small boxed still."></div>
+              <div class="cellcap">Running now</div>
             </div>
             <div class="cell">
-              <div class="shot contain"><img src="opt1-tile.jpg" alt="Option 1 forced into a Tubi portrait slot, leaving heavy empty bars above and below."></div>
-              <div class="cellcap">Option 1, letterboxed</div>
+              <div class="shot"><img src="tubi-new.jpg" alt="Proposed Tubi artwork: the same two-shot full bleed in portrait, with the logotype across the lower third."></div>
+              <div class="cellcap on">Proposed</div>
             </div>
             <div class="cell"><div class="shot"><div class="blank"></div></div><div class="cellcap"></div></div>
           </div>
-          <p class="legend">Tubi browse tiles are 408&#215;583 portrait with square corners on pure black.</p>
+          <p class="legend">
+            Both at the exact size Tubi renders a browse tile. The current art is the release
+            poster, which puts a cream border and a boxed still into a slot that gives you
+            every pixel of it.
+          </p>
         </div></div>
         <p>
-          Tubi's browse grid is portrait, so a 16:9 cover has no slot in it at all. Forced into
-          one it either letterboxes, as shown, or gets centre-cropped to a sliver. What Tubi
-          needs is the poster, which already exists and is shown here in the correct shape.
+          Tubi's grid is portrait, so the 16:9 cover has no slot here and this needs its own
+          asset. The proposed tile is the same frame and the same logotype as Option 1,
+          recomposed to fill 408&#215;583 edge to edge. It clears both chins, not just both
+          mouths, because the taller shape leaves room to drop the type further.
         </p>
       </div>
 
@@ -422,12 +425,12 @@
       <h2>Artwork specification</h2>
     </div>
     <div class="grid2">
-      <div class="cell"><dt>Aspect</dt><dd>16:9 exactly</dd></div>
-      <div class="cell"><dt>Sizes</dt><dd>1920&#215;1080, 2560&#215;1440</dd></div>
+      <div class="cell"><dt>Landscape</dt><dd>16:9 &#183; 1920&#215;1080, 2560&#215;1440</dd></div>
+      <div class="cell"><dt>Portrait, Tubi</dt><dd>408:583 &#183; 1312&#215;1875</dd></div>
+      <div class="cell"><dt>Portrait, standard</dt><dd>2:3 &#183; 1250&#215;1875, 1000&#215;1500</dd></div>
       <div class="cell"><dt>Format</dt><dd>JPEG, sRGB embedded</dd></div>
       <div class="cell"><dt>Imagery</dt><dd>Graded frame, no retouching</dd></div>
       <div class="cell"><dt>Logotype</dt><dd>From the release poster</dd></div>
-      <div class="cell"><dt>Safe area</dt><dd>Type clear of lower right badge</dd></div>
     </div>
   </section>
 
