@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jack and Ava Key Art</title>
+<meta name="description" content="Proposed 16:9 cover artwork for the feature film Jack and Ava, compared against the artwork currently running on Prime Video.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jack and Ava Key Art">
+<meta property="og:description" content="Proposed 16:9 cover artwork, compared against what is running now.">
+<meta property="og:image" content="https://mpollard6.github.io/jack-and-ava-key-art/og.jpg">
+<meta property="og:url" content="https://mpollard6.github.io/jack-and-ava-key-art/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>&#127916;</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  *,*::before,*::after { box-sizing:border-box; }
+  html { -webkit-text-size-adjust:100%; }
+  body { margin:0; }
+  img { max-width:100%; }
+  h1,h2,p,dd,dl { margin:0; }
+</style>
+</head>
+<body>
+<style>
+  /* Single visual world by design: this page is a shelf, because that is where the
+     artwork lives. Every colour is painted explicitly so it holds on any host. */
+  :root {
+    --ground:#0D1013; --shelf:#0F171E;
+    --line:#272D34; --line-2:#363E46;
+    --text:#EDEAE2; --muted:#96A0A9; --dim:#6C767E;
+    --accent:#C25A42;
+    --f-disp:"Barlow Condensed","Helvetica Neue",Arial,sans-serif;
+    --f-body:"Barlow","Helvetica Neue",Arial,sans-serif;
+    --f-mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,monospace;
+    --pad:clamp(20px,4vw,56px); --maxw:1000px;
+  }
+  * { box-sizing:border-box; }
+  body {
+    margin:0; background:var(--ground); color:var(--text);
+    font-family:var(--f-body); font-size:16px; line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap {
+    max-width:var(--maxw); margin:0 auto; padding:var(--pad);
+    display:flex; flex-direction:column; gap:clamp(44px,7vw,76px);
+  }
+  .eyebrow {
+    font-family:var(--f-disp); font-weight:600; font-size:13px;
+    letter-spacing:.22em; text-transform:uppercase; color:var(--accent); margin:0;
+  }
+  h1 {
+    font-family:var(--f-disp); font-weight:700; font-size:clamp(38px,7vw,64px);
+    line-height:.96; text-transform:uppercase; text-wrap:balance; margin:14px 0 0;
+  }
+  h2 {
+    font-family:var(--f-disp); font-weight:600; font-size:clamp(21px,2.6vw,26px);
+    letter-spacing:.12em; text-transform:uppercase; margin:0;
+  }
+  .lede { margin:16px 0 0; max-width:60ch; font-size:clamp(16px,1.7vw,18px); color:var(--muted); }
+  p { margin:0; }
+  header { border-bottom:1px solid var(--line); padding-bottom:clamp(28px,4vw,38px); }
+  .meta {
+    margin-top:24px; display:flex; flex-wrap:wrap; gap:10px 30px;
+    font-family:var(--f-mono); font-size:12.5px; color:var(--dim);
+  }
+  .meta b { color:var(--muted); font-weight:500; }
+  section { display:flex; flex-direction:column; gap:22px; }
+  .sec-head { display:flex; flex-direction:column; gap:9px; }
+  .sec-head p { color:var(--muted); max-width:62ch; }
+
+  .opts { display:flex; flex-direction:column; gap:clamp(38px,5.5vw,58px); }
+  .opt { display:flex; flex-direction:column; gap:15px; }
+  .opt-head { display:flex; flex-wrap:wrap; align-items:baseline; gap:8px 14px; }
+  .opt-head .k {
+    font-family:var(--f-disp); font-weight:700; font-size:15px;
+    letter-spacing:.2em; text-transform:uppercase; color:var(--accent);
+  }
+  .opt-head .t {
+    font-family:var(--f-disp); font-weight:600; font-size:21px;
+    letter-spacing:.07em; text-transform:uppercase;
+  }
+  .pill {
+    font-family:var(--f-disp); font-size:11.5px; font-weight:600;
+    letter-spacing:.16em; text-transform:uppercase; padding:3px 10px;
+    border:1px solid var(--line-2); color:var(--muted);
+  }
+  .opt p { color:var(--muted); max-width:64ch; }
+  .spec {
+    display:flex; flex-wrap:wrap; gap:6px 24px;
+    font-family:var(--f-mono); font-size:12px; color:var(--dim);
+  }
+  .spec b { color:var(--muted); font-weight:500; }
+
+  /* ---------- drag to compare ---------- */
+  .cmp {
+    position:relative; aspect-ratio:16/9; width:100%; overflow:hidden;
+    background:#000; border:1px solid var(--line);
+    touch-action:pan-y; cursor:ew-resize; user-select:none;
+  }
+  .cmp img {
+    position:absolute; inset:0; width:100%; height:100%;
+    object-fit:cover; display:block; pointer-events:none;
+  }
+  .cmp .top { clip-path:inset(0 0 0 var(--pos,50%)); }
+  .cmp:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
+  .handle {
+    position:absolute; top:0; bottom:0; left:var(--pos,50%);
+    width:2px; margin-left:-1px; background:var(--text);
+    pointer-events:none; box-shadow:0 0 0 1px rgba(0,0,0,.55);
+  }
+  .handle::after {
+    content:""; position:absolute; top:50%; left:50%;
+    width:46px; height:46px; transform:translate(-50%,-50%);
+    border:2px solid var(--text); border-radius:50%;
+    background:rgba(13,16,19,.42); backdrop-filter:blur(2px);
+  }
+  .handle::before {
+    content:"\2039\2009\203A"; position:absolute; top:50%; left:50%;
+    transform:translate(-50%,-50%); z-index:1;
+    font-family:var(--f-disp); font-size:22px; font-weight:700;
+    letter-spacing:.06em; color:var(--text);
+  }
+  .tag {
+    position:absolute; top:14px; font-family:var(--f-disp); font-weight:600;
+    font-size:12px; letter-spacing:.2em; text-transform:uppercase;
+    padding:5px 11px; background:rgba(13,16,19,.78);
+    border:1px solid rgba(237,234,226,.22); color:var(--text); pointer-events:none;
+  }
+  .tag.l { left:14px; }
+  .tag.r { right:14px; border-color:rgba(194,90,66,.6); }
+  .hint { font-family:var(--f-mono); font-size:12px; color:var(--dim); }
+
+  .shelf {
+    background:var(--shelf); border:1px solid var(--line);
+    padding:clamp(18px,3vw,30px); overflow-x:auto;
+  }
+  .shelf-row { display:flex; gap:14px; min-width:min-content; }
+  .tile { display:flex; flex-direction:column; gap:9px; width:268px; flex:0 0 auto; }
+  .tile img {
+    width:100%; aspect-ratio:16/9; object-fit:cover; display:block;
+    border-radius:5px; background:#000; outline:1px solid var(--line-2);
+  }
+  .tile.new img { outline-color:rgba(194,90,66,.55); }
+  .tile span {
+    font-family:var(--f-disp); font-size:12px; font-weight:600;
+    letter-spacing:.18em; text-transform:uppercase; color:var(--dim);
+  }
+  .tile.new span { color:var(--accent); }
+
+  .grid2 { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:1px;
+           background:var(--line); border:1px solid var(--line); }
+  .cell { background:var(--ground); padding:20px; display:flex; flex-direction:column; gap:6px; }
+  .cell dt {
+    font-family:var(--f-disp); font-size:12px; font-weight:600;
+    letter-spacing:.16em; text-transform:uppercase; color:var(--dim);
+  }
+  .cell dd { margin:0; font-family:var(--f-mono); font-size:14px; color:var(--text); }
+  footer {
+    border-top:1px solid var(--line); padding-top:26px;
+    font-family:var(--f-mono); font-size:12px; color:var(--dim);
+  }
+  @media (prefers-reduced-motion:reduce) { * { transition:none !important; animation:none !important; } }
+</style>
+
+<div class="wrap">
+
+  <header>
+    <p class="eyebrow">Proposed artwork</p>
+    <h1>Jack and Ava<br>16&#215;9 Key Art</h1>
+    <p class="lede">
+      The cover currently running on Prime sits the still inside a card, so it reads as a
+      small boxed image beside every full-bleed thumbnail around it. Below are two
+      replacements that fill the frame. Drag either slider to see the change.
+    </p>
+    <div class="meta">
+      <span><b>Film</b> Jack and Ava (2024)</span>
+      <span><b>Delivery</b> 1920&#215;1080 and 2560&#215;1440 JPEG, sRGB</span>
+    </div>
+  </header>
+
+  <section class="opts">
+
+    <div class="opt">
+      <div class="opt-head">
+        <span class="k">Option 1</span>
+        <span class="t">Tight</span>
+      </div>
+      <div class="cmp" tabindex="0" role="slider"
+           aria-label="Compare the current Prime artwork with Option 1"
+           aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+        <img src="now.jpg" alt="The artwork currently on Prime: the still boxed inside a cream card with the title set beside it.">
+        <img class="top" src="opt1.jpg" alt="Option 1: a tight full-bleed crop of the two-shot with the logotype low and clear of both faces.">
+        <span class="tag l">Current</span>
+        <span class="tag r">Option 1</span>
+        <div class="handle" aria-hidden="true"></div>
+      </div>
+      <p>
+        A tight crop of the two-shot so both faces carry the tile, with the logotype low and
+        nothing above it competing. The cleanest of the two at thumbnail size, because there
+        is only one thing to read.
+      </p>
+      <p class="spec"><span><b>Title</b> no credit line</span><span><b>Faces</b> largest</span></p>
+    </div>
+
+    <div class="opt">
+      <div class="opt-head">
+        <span class="k">Option 2</span>
+        <span class="t">With credit line</span>
+      </div>
+      <div class="cmp" tabindex="0" role="slider"
+           aria-label="Compare the current Prime artwork with Option 2"
+           aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+        <img src="now.jpg" alt="The artwork currently on Prime: the still boxed inside a cream card with the title set beside it.">
+        <img class="top" src="opt2.jpg" alt="Option 2: the same two-shot slightly wider, with An Easy Brothers Film set above the logotype.">
+        <span class="tag l">Current</span>
+        <span class="tag r">Option 2</span>
+        <div class="handle" aria-hidden="true"></div>
+      </div>
+      <p>
+        The same frame pulled back a little to make room for the billing above the title. It
+        reads properly at full size and softens at thumbnail size, which is the trade for
+        carrying the credit on the art itself.
+      </p>
+      <p class="spec"><span><b>Title</b> An Easy Brothers Film</span><span><b>Faces</b> slightly smaller</span></p>
+    </div>
+
+    <p class="hint">Drag a slider, or focus one and use the arrow keys</p>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <h2>At browse size</h2>
+      <p>
+        Both options next to the current artwork, at the width a tile actually renders in a
+        Prime row. This is the comparison that decides it.
+      </p>
+    </div>
+    <div class="shelf">
+      <div class="shelf-row">
+        <div class="tile">
+          <img src="now-tile.jpg" alt="The current artwork at browse size, showing the boxed still and cream margins.">
+          <span>Current</span>
+        </div>
+        <div class="tile new">
+          <img src="opt1-tile.jpg" alt="Option 1 at browse size.">
+          <span>Option 1</span>
+        </div>
+        <div class="tile new">
+          <img src="opt2-tile.jpg" alt="Option 2 at browse size.">
+          <span>Option 2</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <h2>Artwork specification</h2>
+    </div>
+    <div class="grid2">
+      <div class="cell"><dt>Aspect</dt><dd>16:9 exactly</dd></div>
+      <div class="cell"><dt>Sizes</dt><dd>1920&#215;1080, 2560&#215;1440</dd></div>
+      <div class="cell"><dt>Format</dt><dd>JPEG, sRGB embedded</dd></div>
+      <div class="cell"><dt>Imagery</dt><dd>Graded frame, no retouching</dd></div>
+      <div class="cell"><dt>Logotype</dt><dd>From the release poster</dd></div>
+      <div class="cell"><dt>Safe area</dt><dd>Type clear of lower right badge</dd></div>
+    </div>
+  </section>
+
+  <footer>
+    An Easy Brothers film &#183; artwork prepared from the original graded frame and the
+    release poster logotype &#183; nothing in these covers is generated or composited
+  </footer>
+
+</div>
+
+<script>
+  (function () {
+    document.querySelectorAll('.cmp').forEach(function (cmp) {
+      var pos = 50, dragging = false;
+      function set(v) {
+        pos = Math.max(0, Math.min(100, v));
+        cmp.style.setProperty('--pos', pos + '%');
+        cmp.setAttribute('aria-valuenow', Math.round(pos));
+      }
+      function fromEvent(e) {
+        var r = cmp.getBoundingClientRect();
+        if (r.width) set(((e.clientX - r.left) / r.width) * 100);
+      }
+      cmp.addEventListener('pointerdown', function (e) {
+        dragging = true; cmp.setPointerCapture(e.pointerId); fromEvent(e); e.preventDefault();
+      });
+      cmp.addEventListener('pointermove', function (e) { if (dragging) fromEvent(e); });
+      cmp.addEventListener('pointerup', function (e) {
+        dragging = false;
+        if (cmp.hasPointerCapture(e.pointerId)) cmp.releasePointerCapture(e.pointerId);
+      });
+      cmp.addEventListener('pointercancel', function () { dragging = false; });
+      cmp.addEventListener('keydown', function (e) {
+        var step = e.shiftKey ? 10 : 3;
+        if (e.key === 'ArrowLeft')       { set(pos - step); e.preventDefault(); }
+        else if (e.key === 'ArrowRight') { set(pos + step); e.preventDefault(); }
+        else if (e.key === 'Home')       { set(0);   e.preventDefault(); }
+        else if (e.key === 'End')        { set(100); e.preventDefault(); }
+      });
+      set(50);
+    });
+  })();
+</script>
+
+</body>
+</html>
