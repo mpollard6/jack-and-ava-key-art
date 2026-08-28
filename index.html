@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Jack and Ava Key Art</title>
-<meta name="description" content="Proposed 16:9 cover artwork for the feature film Jack and Ava, compared against the artwork currently running on Prime Video.">
+<meta name="description" content="Proposed 16:9 cover artwork for the feature film Jack and Ava, compared against the artwork currently running on Prime Video, and shown in each store's browse layout.">
 <meta name="robots" content="noindex, nofollow">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Jack and Ava Key Art">
-<meta property="og:description" content="Proposed 16:9 cover artwork, compared against what is running now.">
+<meta property="og:description" content="Proposed cover artwork, compared against what is running now and shown in each store.">
 <meta property="og:image" content="https://mpollard6.github.io/jack-and-ava-key-art/og.jpg">
 <meta property="og:url" content="https://mpollard6.github.io/jack-and-ava-key-art/">
 <meta name="twitter:card" content="summary_large_image">
@@ -163,6 +163,65 @@
     border-top:1px solid var(--line); padding-top:26px;
     font-family:var(--f-mono); font-size:12px; color:var(--dim);
   }
+
+  /* ---------- store mock-ups ---------- */
+  .stores { display:flex; flex-direction:column; gap:clamp(28px,4vw,42px); }
+  .store { display:flex; flex-direction:column; gap:14px; }
+  .store-head { display:flex; flex-wrap:wrap; align-items:baseline; gap:8px 14px; }
+  .store-head .name {
+    font-family:var(--f-disp); font-weight:600; font-size:20px;
+    letter-spacing:.09em; text-transform:uppercase;
+  }
+  .store-head .basis { font-family:var(--f-mono); font-size:11.5px; color:var(--dim); }
+  .store > p { color:var(--muted); max-width:64ch; font-size:15px; }
+  .frame { border:1px solid var(--line); overflow-x:auto; }
+  .frame-in { padding:22px; min-width:min-content; }
+  .row { display:flex; gap:12px; align-items:flex-start; }
+  .cell { flex:0 0 auto; display:flex; flex-direction:column; }
+  .shot { position:relative; width:100%; }
+  .shot img, .shot .blank { width:100%; display:block; object-fit:cover; }
+  .cellcap {
+    margin-top:8px; font-family:var(--f-disp); font-size:11px; font-weight:600;
+    letter-spacing:.16em; text-transform:uppercase; color:var(--dim); min-height:14px;
+  }
+  .cellcap.on { color:var(--accent); }
+  .legend {
+    font-family:var(--f-mono); font-size:11.5px; color:var(--dim);
+    margin-top:16px; max-width:60ch; line-height:1.5;
+  }
+
+  .prime { background:#00050D; }
+  .prime .cell { width:216px; }
+  .prime .shot img, .prime .shot .blank { aspect-ratio:16/9; border-radius:8px; }
+  .prime .shot .blank { background:linear-gradient(140deg,#182028,#0d141b 60%,#141b22); }
+  .prime .grad {
+    position:absolute; inset:auto 0 0 0; height:36%; border-radius:0 0 8px 8px;
+    background:linear-gradient(to top, rgba(0,0,0,.6), rgba(0,0,0,0)); pointer-events:none;
+  }
+  .prime .badge {
+    position:absolute; right:4.1%; bottom:7.1%; width:13.7%; height:14.4%;
+    border-radius:3px; background:rgba(255,255,255,.34);
+    outline:1px solid rgba(255,255,255,.5);
+  }
+
+  .apple { background:#111114; }
+  .apple .row { gap:16px; }
+  .apple .cell { width:236px; gap:9px; }
+  .apple .shot img, .apple .shot .blank { aspect-ratio:16/9; border-radius:12px; }
+  .apple .shot .blank { background:linear-gradient(140deg,#26262b,#17171b 60%,#1d1d22); }
+  .apple .cap { display:flex; flex-direction:column; gap:3px; }
+  .apple .cap b { font-size:13.5px; font-weight:600; color:#F2F2F5; }
+  .apple .cap span { font-size:12px; color:#8E8E93; }
+  .apple .cap .ph { height:9px; width:64%; border-radius:3px; background:#2C2C31; }
+  .apple .cap .ph.s { width:40%; height:8px; background:#232327; }
+
+  .tubi { background:#000; }
+  .tubi .cell { width:150px; }
+  .tubi .shot img, .tubi .shot .blank { aspect-ratio:408/583; border-radius:0; }
+  .tubi .shot .blank { background:linear-gradient(140deg,#1b1b1b,#0e0e0e 60%,#151515); }
+  .tubi .shot.contain { background:#000; outline:1px dashed rgba(194,90,66,.55); }
+  .tubi .shot.contain img { object-fit:contain; }
+
   @media (prefers-reduced-motion:reduce) { * { transition:none !important; animation:none !important; } }
 </style>
 
@@ -174,7 +233,7 @@
     <p class="lede">
       The cover currently running on Prime sits the still inside a card, so it reads as a
       small boxed image beside every full-bleed thumbnail around it. Below are two
-      replacements that fill the frame. Drag either slider to see the change.
+      replacements that fill the frame. Drag either slider to see the change, then scroll on for how the artwork sits in each store.
     </p>
     <div class="meta">
       <span><b>Film</b> Jack and Ava (2024)</span>
@@ -254,6 +313,107 @@
           <span>Option 2</span>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <h2>In the stores</h2>
+      <p>
+        Option 1 dropped into each service's own browse layout. Neighbouring titles are shown
+        as blanks rather than other films' artwork. Prime and Tubi tile shapes are measured
+        from the live sites. Apple's grid needs a sign-in, so that one follows the app's
+        published conventions rather than a measurement.
+      </p>
+    </div>
+
+    <div class="stores">
+
+      <div class="store">
+        <div class="store-head">
+          <span class="name">Prime Video</span>
+          <span class="basis">16:9 &#183; 8px corners &#183; measured on amazon.com</span>
+        </div>
+        <div class="frame"><div class="frame-in prime">
+          <div class="row">
+            <div class="cell"><div class="shot"><div class="blank"></div></div><div class="cellcap"></div></div>
+            <div class="cell">
+              <div class="shot">
+                <img src="opt1-tile.jpg" alt="Option 1 shown as a Prime Video tile.">
+                <div class="grad"></div><div class="badge"></div>
+              </div>
+              <div class="cellcap on">Jack and Ava</div>
+            </div>
+            <div class="cell"><div class="shot"><div class="blank"></div></div><div class="cellcap"></div></div>
+            <div class="cell"><div class="shot"><div class="blank"></div></div><div class="cellcap"></div></div>
+          </div>
+          <p class="legend">
+            The outlined block marks where Prime composites its own badge and corner gradient.
+            Option 1's logotype ends at 73 percent of the width, so the two never meet.
+          </p>
+        </div></div>
+        <p>
+          This is the placement the art was built for. The badge and the bottom-right gradient
+          Prime lays over every tile both sit clear of the logotype.
+        </p>
+      </div>
+
+      <div class="store">
+        <div class="store-head">
+          <span class="name">Apple TV</span>
+          <span class="basis">16:9 &#183; rounded &#183; title set below the tile</span>
+        </div>
+        <div class="frame"><div class="frame-in apple">
+          <div class="row">
+            <div class="cell">
+              <div class="shot"><div class="blank"></div></div>
+              <div class="cap"><div class="ph"></div><div class="ph s"></div></div>
+            </div>
+            <div class="cell">
+              <div class="shot"><img src="opt1-apple.jpg" alt="Option 1 shown as an Apple TV tile with the title set beneath it."></div>
+              <div class="cap"><b>Jack and Ava</b><span>2024 &#183; Thriller</span></div>
+            </div>
+            <div class="cell">
+              <div class="shot"><div class="blank"></div></div>
+              <div class="cap"><div class="ph"></div><div class="ph s"></div></div>
+            </div>
+          </div>
+          <p class="legend">Apple sets the film name in the interface, underneath the artwork.</p>
+        </div></div>
+        <p>
+          Apple prints the title below the tile, so the logotype on the art states the name a
+          second time. It still reads well, but this is the one context where a title-free
+          version of the cover would arguably work harder.
+        </p>
+      </div>
+
+      <div class="store">
+        <div class="store-head">
+          <span class="name">Tubi</span>
+          <span class="basis">portrait 2:3 &#183; square corners &#183; measured on tubitv.com</span>
+        </div>
+        <div class="frame"><div class="frame-in tubi">
+          <div class="row">
+            <div class="cell"><div class="shot"><div class="blank"></div></div><div class="cellcap"></div></div>
+            <div class="cell">
+              <div class="shot"><img src="tubi-poster.jpg" alt="The release poster shown as a Tubi portrait tile."></div>
+              <div class="cellcap on">Poster, fits</div>
+            </div>
+            <div class="cell">
+              <div class="shot contain"><img src="opt1-tile.jpg" alt="Option 1 forced into a Tubi portrait slot, leaving heavy empty bars above and below."></div>
+              <div class="cellcap">Option 1, letterboxed</div>
+            </div>
+            <div class="cell"><div class="shot"><div class="blank"></div></div><div class="cellcap"></div></div>
+          </div>
+          <p class="legend">Tubi browse tiles are 408&#215;583 portrait with square corners on pure black.</p>
+        </div></div>
+        <p>
+          Tubi's browse grid is portrait, so a 16:9 cover has no slot in it at all. Forced into
+          one it either letterboxes, as shown, or gets centre-cropped to a sliver. What Tubi
+          needs is the poster, which already exists and is shown here in the correct shape.
+        </p>
+      </div>
+
     </div>
   </section>
 
